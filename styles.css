@@ -1,27 +1,148 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header {
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px; /* Tamaño de letra base */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: black; /* Color del texto */
+}
+
+/* Contenedor general */
+.container {
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #f8f8f8;
+    flex-direction: column; /* Header arriba, contenido abajo */
+    width: 100%;
+    font-family: inherit; /* Hereda la fuente del body */
+    font-size: inherit;   /* Hereda el tamaño del body */
+}
+
+/* Header */
+header {
+    background: white;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end; /* Asegura que el nav se mantenga a la derecha */
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid #ddd; /* Línea de separación */
+
+}
+
+
+/* Nav */
+
+nav {
+    margin-right: 250px; /* Igual al ancho del sidebar */
+    margin-top: 50px; /* Ajusta según lo necesites */
+
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-main {
+/* Contenedor de sidebar y contenido */
+.main-content {
+    display: flex;
+    width: 100%;
+}
+.sidebar h2 {
+    margin-top: 20px; /* Ajusta el valor según prefieras */
+    margin-bottom: 20px; /* Ajusta el valor según prefieras */
+    font-size: 18px; /* Ajusta el tamaño */
+    font-weight: bold; /* Mantiene el texto destacado */
+}
+/* Sidebar */                   
+.sidebar {
+    position: relative; /* Ya no es fijo */
+    display: flex;
+    width: 250px;
+    background-color: white;
+    color: black;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 80px; /* Margen a la izquierda */
+}
+.sidebar .description {
+    font-size: 16px; /* Tamaño más pequeño solo para la descripción */
+}
+
+.sidebar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+
+.sidebar a {
+    color: black;
+    text-decoration: none;
+    margin: 10px 0;
+    display: block;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    color: #f0a500;
+}
+
+/* Contenido principal */
+main {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-grow: 1; /* Hace que el contenido ocupe el espacio disponible */
+}
+
+.main-content {
+    display: flex;
+    width: 100%;
+}
+
+.main-content main {
+    margin-left: 100px; /* Asegura que no se solape con el sidebar */
+    padding: 20px;
+    width: calc(100% - 250px); /* Ajusta el tamaño en relación con el sidebar */
+}
+.sidebar .social-links a {
+    display: flex;
+    align-items: flex-start; /* Alinea el icono y el texto arriba */
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    margin: 10px 0; /* Espacio entre los enlaces */
+    margin-top: 20px; /* Ajusta el valor según prefieras */
+
+}
+
+.sidebar .social-links i {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    font-size: 20px; /* Tamaño del icono */
+    width: 25px; /* Mantiene el ancho del icono */
+    text-align: center;
 }

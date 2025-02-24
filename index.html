@@ -3,26 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jared Andrews</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
+
+<script src="script.js"></script>
 <body>
-    <header>
-        <h1>Jared Andrews</h1>
-        <nav>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="publications.html">Publications</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="bio">
-            <img src="assets/profile.jpg" alt="Jared Andrews">
-            <h2>Welcome!</h2>
-            <p>I’m Jared Andrews, a Bioinformatics Research Scientist...</p>
-        </section>
-    </main>
+
+    <div class="container">
+        <!-- Header arriba -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="loadPage('about.html')">About</a></li>
+                    <li><a href="#" onclick="loadPage('projects.html')">Projects</a></li>
+                    <li><a href="#" onclick="loadPage('publications.html')">Publications</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contenedor que organiza Sidebar y Contenido Principal -->
+        <div class="main-content">
+            <!-- Sidebar a la izquierda -->
+            <aside class="sidebar">
+                <img src="assets/profile.jpg" alt="Mi Foto">
+                <h2>Jossian Abimelec García Quijano</h2>
+                <p class="description">I'm Jossian Garcia, a PhD student in Computer Science at the Tecnológico de Monterrey. My research focuses on Gravitational Wave signal analysis, and I'm passionate about data science and artificial intelligence.</p>
+                <div class="social-links">
+                <a href="https://www.linkedin.com/in/jossian-abimelec-garcia-quijano/"> <i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="https://github.com/Jossian"> <i class="fab fa-github"></i> GitHub</a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i>State of Mexico</a>
+                <a href="josiangarcia5@gmail.com"> <i class="fas fa-envelope"></i> Contacto</a>
+            </div>
+            </aside>
+
+            <!-- Contenido principal -->
+            <main id="content">
+                <section class="bio">
+                    <h2>Welcome!</h2>
+                    <p>I’m Jossian Garcia, a PhD student in Computer Science at the Tecnológico de Monterrey. My research focuses on Gravitational Wave signal analysis.</p>
+                </section>
+            </main>
+        </div>
+    </div>
+
 </body>
 </html>
