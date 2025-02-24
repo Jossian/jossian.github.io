@@ -146,3 +146,24 @@ main {
     width: 25px; /* Mantiene el ancho del icono */
     text-align: center;
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajusta según el tamaño deseado */
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
